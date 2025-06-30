@@ -15,15 +15,17 @@
                         class="bx bx-user-circle me-1 text-6 position-relative top-5"></i> Sign Up</h2>
             </div>
             <div class="card-body">
-                <form>
+                <form asp-action="Register" method="post">
                     <div class="form-group mb-3">
-                        <div class="col-sm-6 mb-3">
-                            <label>First Name</label>
-                            <input asp-for="FirstName" type="text" class="form-control form-control-lg" />
-                        </div>
-                        <div class="col-sm-6 mb-3">
-                            <label>Last Name</label>
-                            <input asp-for="LastName" type="text" class="form-control form-control-lg" />
+                        <div class="row">
+                            <div class="col-sm-6 mb-3">
+                                <label>First Name</label>
+                                <input asp-for="FirstName" type="text" class="form-control form-control-lg" />
+                            </div>
+                            <div class="col-sm-6 mb-3">
+                                <label>Last Name</label>
+                                <input asp-for="LastName" type="text" class="form-control form-control-lg" />
+                            </div>
                         </div>
                     </div>
 

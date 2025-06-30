@@ -1,27 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\IT\\Desktop\\test\\test.csproj": {}
+    "C:\\Users\\Sturk\\Desktop\\simple-multi-tenant-app\\test.csproj": {}
   },
   "projects": {
-    "C:\\Users\\IT\\Desktop\\test\\test.csproj": {
+    "C:\\Users\\Sturk\\Desktop\\simple-multi-tenant-app\\test.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\IT\\Desktop\\test\\test.csproj",
+        "projectUniqueName": "C:\\Users\\Sturk\\Desktop\\simple-multi-tenant-app\\test.csproj",
         "projectName": "test",
-        "projectPath": "C:\\Users\\IT\\Desktop\\test\\test.csproj",
-        "packagesPath": "C:\\Users\\IT\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\IT\\Desktop\\test\\obj\\",
+        "projectPath": "C:\\Users\\Sturk\\Desktop\\simple-multi-tenant-app\\test.csproj",
+        "packagesPath": "C:\\Users\\Sturk\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Sturk\\Desktop\\simple-multi-tenant-app\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\IT\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\Sturk\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -49,6 +47,12 @@
               "target": "Package",
               "version": "[8.0.0, )"
             },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
               "version": "[8.0.0, )"
@@ -73,7 +77,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.406/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

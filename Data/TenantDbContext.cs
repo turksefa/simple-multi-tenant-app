@@ -1,4 +1,5 @@
 using Microsoft.EntityFrameworkCore;
+using test.Models;
 
 namespace test.Data
 {
@@ -8,5 +9,7 @@ namespace test.Data
             : base(options)
         {
         }        
+
+        public DbSet<Product> Products { get; set; }
     }
 }
