@@ -4152,24 +4152,26 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Sturk\\.nuget\\packages\\": {}
+    "C:\\Users\\IT\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Sturk\\Desktop\\simple-multi-tenant-app\\test.csproj",
+      "projectUniqueName": "C:\\Users\\IT\\Desktop\\simple-multi-tenant-app\\test.csproj",
       "projectName": "test",
-      "projectPath": "C:\\Users\\Sturk\\Desktop\\simple-multi-tenant-app\\test.csproj",
-      "packagesPath": "C:\\Users\\Sturk\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Sturk\\Desktop\\simple-multi-tenant-app\\obj\\",
+      "projectPath": "C:\\Users\\IT\\Desktop\\simple-multi-tenant-app\\test.csproj",
+      "packagesPath": "C:\\Users\\IT\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\IT\\Desktop\\simple-multi-tenant-app\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Sturk\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\IT\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -4227,7 +4229,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.406/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

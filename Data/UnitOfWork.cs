@@ -5,14 +5,15 @@ namespace test.Data
     public class UnitOfWork : IUnitOfWork
     {
         private readonly TenantDbContext _context;
+        private readonly IProductRepository _productRepository;
 
-        public UnitOfWork(TenantDbContext context)
+        public UnitOfWork(TenantDbContext context, IProductRepository productRepository)
         {
             _context = context;
-            Products = new ProductRepository(_context);
+            _productRepository = productRepository;
         }
 
-        public IProductRepository Products { get; private set; }
+        public IProductRepository Products => _productRepository;
 
         public void Dispose()
         {

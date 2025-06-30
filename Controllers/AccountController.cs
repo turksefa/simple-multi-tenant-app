@@ -47,9 +47,8 @@ namespace test.Controllers
                     try
                     {
                         await CreateTenantDatabaseAsync(user);
-                        await _signInManager.SignInAsync(user, isPersistent: false);
 
-                        return RedirectToAction("Index", "Home");
+                        return RedirectToAction("Login", "Account");
                     }
                     catch (Exception ex)
                     {
@@ -73,13 +72,36 @@ namespace test.Controllers
         }
 
         [HttpPost]
-        public IActionResult Login([FromForm] LoginViewModel model)
+        public async Task<IActionResult> Login([FromForm] LoginViewModel model)
         {
+            if(ModelState.IsValid)
+            {
+                var user = await _userManager.FindByEmailAsync(model.Email);
+                if (user != null)
+                {
+                    var result = await _signInManager.PasswordSignInAsync(user, model.Password, isPersistent: false, lockoutOnFailure: false);
+
+                    if (result.Succeeded)
+                    {
+                        return RedirectToAction("Index", "Dashboard");
+                    }
+                    else
+                    {
+                        ModelState.AddModelError(string.Empty, "Geçersiz giriş denemesi.");
+                    }
+                }
+                else
+                {
+                    ModelState.AddModelError(string.Empty, "Kullanıcı bulunamadı.");
+                }
+            }
+
             return View();
         }
 
-        public IActionResult Logout()
+        public async Task<IActionResult> Logout()
         {
+            await _signInManager.SignOutAsync();
             return RedirectToAction("Index", "Home");
         }
 

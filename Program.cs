@@ -29,7 +29,10 @@ builder.Services.AddScoped<TenantDbContext>(serviceProvider =>
 });
 
 // Services
-builder.Services.AddIdentity<ApplicationUser, IdentityRole>()
+builder.Services.AddIdentity<ApplicationUser, IdentityRole>(options =>
+    {
+        options.SignIn.RequireConfirmedAccount = false;
+    })
     .AddEntityFrameworkStores<ApplicationDbContext>()
     .AddDefaultTokenProviders();
 
@@ -39,9 +42,11 @@ builder.Services.AddMemoryCache();
 
 // Repositories
 builder.Services.AddScoped<IProductRepository, ProductRepository>();
+builder.Services.AddScoped<ITenantManagementRepository, TenantManagementRepository>();
 
 // Unit of Work
 builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
+builder.Services.AddScoped<IApplicationUnitOfWork, ApplicationUnitOfWork>();
 
 var app = builder.Build();
 
